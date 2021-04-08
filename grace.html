@@ -2,8 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Tadpoles</title>
+    <title>grace</title>
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="paper-full.js"></script>
     <script type="text/paperscript" canvas="canvas">
@@ -64,11 +63,11 @@
                 this.head = new Shape.Ellipse({
                     center: [0, 0],
                     size: [13, 8],
-                    fillColor: 'red'
+                    fillColor: 'magenta'
                 });
 
                 this.path = new Path({
-                    strokeColor: 'magenta',
+                    strokeColor: 'cyan',
                     strokeWidth: 2,
                     strokeCap: 'round'
                 });
@@ -76,7 +75,7 @@
                     this.path.add(new Point());
 
                 this.shortPath = new Path({
-                    strokeColor: 'blue',
+                    strokeColor: 'red',
                     strokeWidth: 4,
                     strokeCap: 'round'
                 });
@@ -274,11 +273,12 @@
     </script>
     <style>
         body {
-            background-image: url(g1.gif);
+            background: -webkit-linear-gradient(-135deg,magenta,cyan)
         }
     </style>
 </head>
 <body>
+   <center> <h1>Click on the Tadpoles</h1></center>
     <canvas id="canvas" resize></canvas>
 </body>
 </html>
