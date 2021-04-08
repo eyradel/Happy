@@ -289,63 +289,20 @@
             
             background-image: url(g1.gif);
           
-           
-            font-family: 'Poppins', sans-serif;
-    font-size: 15px;
-    font-weight: normal;
-    color: hsl(0, 0%, 90%);
+           background-size: cover;
+            background-position: center
+   
         }
          
-        /* Remove the navbar's default margin-bottom and rounded borders */
-        .navbar {
-            margin-bottom: 0;
-            border-radius: 0;
-            background:black;
-        }
-
-        /* Add a gray background color and some padding to the footer */
-        footer {
-            background: lavender;
-            padding: 25px;
-        }
-
-        .carousel-inner img {
-            width: 100%;
-            /* Set width to 100% */
-            margin: auto;
-            min-height: 200px;
-        }
-
-        /* Hide the carousel text when the screen is less than 600 pixels wide */
-        @media (max-width: 600px) {
-            .carousel-caption {
-                display: none;
-            }
-        }
-         @font-face {
-    font-family: "mountains";
-    src: url(fonts/beyond_the_mountains.ttf);
-    src: url(fonts/beyond_the_mountains.otf);
-    font-weight: 400;
-         }
-         h6 {
-     padding: 0px;
-    margin: 0;
-    font-family: mountains;
-    font-size:40px;
-    background: -webkit-linear-gradient(#00d0ff, #25ffbf);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-}
-         
+       
 
     </style>
     
 </head>
    <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css"> 
 <body >
-    <h1><center><b>Click on the moving TadPoles</b></center></h1>
+    <h1
+        style="color:white"><center><b>Click on the moving TadPoles</b></center></h1>
  <canvas id="canvas" resize></canvas>
     
 </body>
