@@ -1,20 +1,11 @@
+<!DOCTYPE html>
 <html>
 <head>
-     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Grace</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Tadpoles</title>
     <link rel="stylesheet" href="style.css">
-
-    
-     <link rel="icon" href="g2.jpg" >
-
-
-   
-     <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    
     <script type="text/javascript" src="paper-full.js"></script>
-   
     <script type="text/paperscript" canvas="canvas">
         // Adapted from Flocking Processing example by Daniel Schiffman:
         // http://processing.org/learning/topics/flocking.html
@@ -72,8 +63,8 @@
             createItems: function() {
                 this.head = new Shape.Ellipse({
                     center: [0, 0],
-                    size: [20, 15],
-                    fillColor: 'cyan'
+                    size: [13, 8],
+                    fillColor: 'red'
                 });
 
                 this.path = new Path({
@@ -85,7 +76,7 @@
                     this.path.add(new Point());
 
                 this.shortPath = new Path({
-                    strokeColor: 'red',
+                    strokeColor: 'blue',
                     strokeWidth: 4,
                     strokeCap: 'round'
                 });
@@ -281,26 +272,13 @@
             }
         }
     </script>
-    
-     <style>
-         
-         
-        
-         
-       
-
+    <style>
+        body {
+            background-image: url(g1.gif);
+        }
     </style>
-    
 </head>
-  
-<body style="background-image: url(g1.gif)" >
-    
-    
-    <center>
-        <p>Click on the Tapoles</p>
- <canvas id="canvas" resize height="px;" ></canvas>
-        </center>
-    
+<body>
+    <canvas id="canvas" resize></canvas>
 </body>
 </html>
- 
