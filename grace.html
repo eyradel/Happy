@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="paper-full.js"></script>
     <script type="text/paperscript" canvas="canvas">
+    
         // Adapted from Flocking Processing example by Daniel Schiffman:
         // http://processing.org/learning/topics/flocking.html
 
@@ -15,7 +16,7 @@
                 this.acceleration = new Point();
                 this.vector = Point.random() * 2 - 1;
                 this.position = position.clone();
-                this.radius = 30;
+                this.radius = 40;
                 this.maxSpeed = maxSpeed + strength;
                 this.maxForce = maxForce + strength;
                 this.amount = strength * 10 + 10;
@@ -62,12 +63,12 @@
             createItems: function() {
                 this.head = new Shape.Ellipse({
                     center: [0, 0],
-                    size: [13, 8],
-                    fillColor: 'white'
+                    size: [19, 13],
+                    fillColor: 'cyan'
                 });
 
                 this.path = new Path({
-                    strokeColor: 'white',
+                    strokeColor: 'magenta',
                     strokeWidth: 2,
                     strokeCap: 'round'
                 });
@@ -75,7 +76,7 @@
                     this.path.add(new Point());
 
                 this.shortPath = new Path({
-                    strokeColor: 'white',
+                    strokeColor: 'violet',
                     strokeWidth: 4,
                     strokeCap: 'round'
                 });
@@ -273,12 +274,19 @@
     </script>
     <style>
         body {
-            background-image: url(g1.gif)           
+            background-image: url(g1.gif);
+            background-size: cover;
         }
     </style>
 </head>
-<body><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <center>
-    <canvas id="canvas" width="-900px" height="-100px" ></canvas></center>
+<body><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+   <center><b><h1 style="font-size: 45px">click on the tapoles</h1></b></center> 
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    
+        
+
+    
+       
+       <canvas id="canvas" style="width:900px; height:900px; border:19px; position:absolute" ></canvas>
 </body>
 </html>
