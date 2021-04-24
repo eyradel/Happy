@@ -41,11 +41,11 @@ margin-top: 300px;
 
         var Boid = Base.extend({
             initialize: function(position, maxSpeed, maxForce) {
-                var strength = Math.random() * 0.5;
+                var strength = Math.random() * 0.9;
                 this.acceleration = new Point();
                 this.vector = Point.random() * 2 - 1;
                 this.position = position.clone();
-                this.radius = 30;
+                this.radius = 40;
                 this.maxSpeed = maxSpeed + strength;
                 this.maxForce = maxForce + strength;
                 this.amount = strength * 10 + 10;
@@ -98,7 +98,7 @@ margin-top: 300px;
 
                 this.path = new Path({
                     strokeColor: 'magenta',
-                    strokeWidth: 2,
+                    strokeWidth: 10,
                     strokeCap: 'round'
                 });
                 for (var i = 0; i < this.amount; i++)
@@ -106,7 +106,7 @@ margin-top: 300px;
 
                 this.shortPath = new Path({
                     strokeColor: 'red',
-                    strokeWidth: 4,
+                    strokeWidth: 12,
                     strokeCap: 'round'
                 });
                 for (var i = 0; i < Math.min(3, this.amount); i++)
@@ -304,16 +304,19 @@ margin-top: 300px;
     
     <body id="page">
         <ul class="cb-slideshow">
-            <li><span>Image 01</span><div></div></li>
-            <li><span>Image 02</span><div></div></li>
-            <li><span>Image 03</span><div></div></li>
-            <li><span>Image 04</span><div></div></li>
-            <li><span>Image 05</span><div></div></li>
-            <li><span>Image 06</span><div></div></li>
+            <li><span>Image 01</span><div style="font-size: 15">From Dela<br><img src="c3352975-fb33-499e-9693-57b1290fa0f0.jpg" width="50" style="border-radius: 70%;"></div></li>
+            <li><span>Image 02</span><div style="font-size: 15">From Dela<br><img src="c3352975-fb33-499e-9693-57b1290fa0f0.jpg" width="50" style="border-radius: 70%;"></div></li>
+            <li><span>Image 03</span><div style="font-size: 15">From Dela<br><img src="c3352975-fb33-499e-9693-57b1290fa0f0.jpg" width="50" style="border-radius: 70%;"></div></li>
+            <li><span>Image 04</span><div style="font-size: 15">From Dela<br><img src="c3352975-fb33-499e-9693-57b1290fa0f0.jpg" width="50" style="border-radius: 70%;"></div></li>
+            <li><span>Image 05</span><div style="font-size: 15">From Dela<br><img src="c3352975-fb33-499e-9693-57b1290fa0f0.jpg" width="50" style="border-radius: 70%;"></div></li>
+            <li><span>Image 06</span><div style="font-size: 15">From Dela<br><img src="c3352975-fb33-499e-9693-57b1290fa0f0.jpg" width="50" style="border-radius: 70%;"></div></li>
+            <li><span>Image 07</span><div style="font-size: 15">From Dela<br><img src="c3352975-fb33-499e-9693-57b1290fa0f0.jpg" width="50" style="border-radius: 70%;"></div></li>
+            <li><span>Image 08</span><div style="font-size: 15">From Dela<br><img src="c3352975-fb33-499e-9693-57b1290fa0f0.jpg" width="50" style="border-radius: 70%;"></div></li>
+            
         </ul><br>
        <div class="container">
         <a class="btn btn-default" href="grace.html"><i class="fa fa-gift fa-2x"></i></a>
-        <p>Happy Birthday</p>
+        <p>Happy Birthday Grace</p>
            <audio autoplay="true" src="Celine%20Dion%20-%20My%20Heart%20Will%20Go%20On(HD).mp3"></audio>
         
         </div>
