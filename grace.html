@@ -12,11 +12,11 @@
 
         var Boid = Base.extend({
             initialize: function(position, maxSpeed, maxForce) {
-                var strength = Math.random() * 0.5;
+                var strength = Math.random() * 5;
                 this.acceleration = new Point();
                 this.vector = Point.random() * 2 - 1;
                 this.position = position.clone();
-                this.radius = 40;
+                this.radius = 90;
                 this.maxSpeed = maxSpeed + strength;
                 this.maxForce = maxForce + strength;
                 this.amount = strength * 10 + 10;
@@ -272,21 +272,82 @@
             }
         }
     </script>
-    <style>
+     <style>
         body {
-            background-image: url(g1.gif);
-            background-size: cover;
+            background-image:url(gl.gif);
+           width: 100%;
+            
         }
+        
+        body{
+
+  font-family: Arial;
+}
+
+svg {
+    display: block;
+    font: 10.5em 'Montserrat';
+    width: 960px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+  stroke: #4D163D;
+  animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+  stroke: #840037;
+  animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+  stroke: #BD0034;
+  animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+  stroke: #BD0034;
+  animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+  stroke: #FDB731;
+  animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+  100% {stroke-dashoffset: -35%;}
+}
     </style>
 </head>
-<body><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-   <center><b><h1 style="font-size: 45px">click on the tapoles</h1></b></center> 
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<body><svg viewBox="0 0 960 300">
+  <symbol id="s-text">
+    <text text-anchor="middle" x="50%" y="80%">Doris </text>
+    <text text-anchor="middle" x="52%" y="80%">Doris. </text>
     
-        
+  </symbol>
 
+  <g class = "g-ants">
+    <use xlink:href="#s-text" class="text-copy"></use>
+    <use xlink:href="#s-text" class="text-copy"></use>
+    <use xlink:href="#s-text" class="text-copy"></use>
+    <use xlink:href="#s-text" class="text-copy"></use>
+    <use xlink:href="#s-text" class="text-copy"></use>
+  </g>
+</svg>
     
        
-       <canvas id="canvas" style="width:900px; height:900px; border:19px; position:absolute" ></canvas>
+       <canvas id="canvas" style="width:900px; padding-top: 150px; top:-100px height:900px; border:19px; position:absolute" ></canvas>
 </body>
 </html>
